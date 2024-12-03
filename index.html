@@ -6,6 +6,20 @@
     <title>Document</title>
 </head>
 <body>
-    <script src="./ejercicio-juego-bucles.js"></script>
+    <script src="./ejercicio-03.js"></script>
+
+    <button id="boton-piedra" onClick="opcionEscogida('1', 'piedra', 'jugador1-piedra')"> piedra </button>
+    <button id="boton-papel" onClick="opcionEscogida('1', 'papel', 'jugador1-papel')"> papel </button>
+    <button id="boton-tijeras" onClick="opcionEscogida('1', 'tijeras', 'jugador1-tijeras')"> tijeras </button>
+  
+    <span> VERSUS </span>
+  
+  
+    <button id="boton-piedra" onClick="opcionEscogida('2', 'piedra', 'jugador2-piedra')"> piedra </button>
+    <button id="boton-papel" onClick="opcionEscogida('2', 'papel', 'jugador2-papel')"> papel </button>
+    <button id="boton-tijeras" onClick="opcionEscogida('2', 'tijeras', 'jugador2-tijeras')"> tijeras </button>
+    
+    <button onClick="resultado(jugador1, jugador2)">¿Quien gana?</button>
+
 </body>
 </html>
