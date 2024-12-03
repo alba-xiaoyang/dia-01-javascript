@@ -1,14 +1,13 @@
 function pedirValorJugador () {
-    var jugador = prompt ('Inserte: piedra/papel/tijeras/lagarto/spock'); 
-    while ((jugador!=="piedra") && (jugador!=="papel") && (jugador!=="tijeras") 
-        && (jugador!=="lagarto") && (jugador!=="spock")) {
-        jugador = prompt ('Inserte: piedra/papel/tijeras/lagarto/spock'); 
+    var jugador = prompt ('Inserte: piedra/papel/tijeras'); 
+    var opciones = ["piedra", "papel", "tijera"]; 
+    var noValidacion = opciones.every (opcion => opcion!==jugador); 
+    while (noValidacion) {
+        jugador = prompt ('Inserte: piedra/papel/tijeras'); 
+        noValidacion = opciones.every (opcion => opcion!==jugador); 
     }; 
     return jugador; 
 }
-
-//Función para validar 
-// Posibilidad de meter las alertas en la función
 
 function resultado (jugador1, jugador2) {
     if (jugador1===jugador2) {
