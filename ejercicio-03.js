@@ -46,6 +46,14 @@ function resultado () {
       }
 }
 
+/* Intento de mantener el color del botón seleccionado:
+
+function seleccionBoton (jugador) {
+    const botones = document.querySelectorAll (`#jugador${jugador} button`); 
+    botones.forEach((boton) => boton.classList.remove("selected"));
+}
+    */
+
 /*alert ("Te toca, jugador 1!");
 var jugador1 = pedirValorJugador (); 
 alert ("Te toca, jugador 2!");
