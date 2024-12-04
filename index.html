@@ -11,35 +11,42 @@
 
     <div class="container">
 
-        <div id="jugador1" class="jugador-1">
-    
-          <button id="boton-piedra1" onClick="opcionEscogida('1', 'piedra')">Piedra</button>
-    
-          <button id="boton-papel1" onClick="opcionEscogida('1', 'papel')">Papel</button>
-    
-          <button id="boton-tijeras1" onClick="opcionEscogida('1', 'tijeras')">Tijeras</button>
-    
+        <div class="election">
+
+            <div id="jugador1" class="jugador-1">
+        
+            <button id="boton-piedra1" onClick="opcionEscogida('1', 'piedra')">Piedra</button>
+        
+            <button id="boton-papel1" onClick="opcionEscogida('1', 'papel')">Papel</button>
+        
+            <button id="boton-tijeras1" onClick="opcionEscogida('1', 'tijeras')">Tijeras</button>
+        
+            </div>
+        
+        
+        
+            <span class="versus">VERSUS</span>
+        
+        
+        
+            <div id="jugador2" class="jugador-2">
+        
+            <button id="boton-piedra2" onClick="opcionEscogida('2', 'piedra')">Piedra</button>
+        
+            <button id="boton-papel2" onClick="opcionEscogida('2', 'papel')">Papel</button>
+        
+            <button id="boton-tijeras2" onClick="opcionEscogida('2', 'tijeras')">Tijeras</button>
+        
+            </div>
+
         </div>
+        <div>
     
-    
-    
-        <span class="versus">VERSUS</span>
-    
-    
-    
-        <div id="jugador2" class="jugador-2">
-    
-          <button id="boton-piedra2" onClick="opcionEscogida('2', 'piedra')">Piedra</button>
-    
-          <button id="boton-papel2" onClick="opcionEscogida('2', 'papel')">Papel</button>
-    
-          <button id="boton-tijeras2" onClick="opcionEscogida('2', 'tijeras')">Tijeras</button>
-    
+            <button class="result" onClick="resultado()">¿Quién gana?</button>
+        
         </div>
-    
-    
-    
-        <button class="result" onClick="resultado()">¿Quién gana?</button>
+        <div id="resultado" class="resultado-texto">
+        </div>
     </div>
 
 </body>

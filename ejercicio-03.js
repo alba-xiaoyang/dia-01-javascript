@@ -14,29 +14,36 @@ var jugador1="";
 var jugador2= ""; 
 
 function opcionEscogida(jugador, opcion){
-    alert(`El jugador ${jugador} escogio ${opcion}`)
+    
+    /*alert(`El jugador ${jugador} escogio ${opcion}`)*/
+    
     if (jugador=="1") {
         jugador1=opcion; 
+        document.getElementById(`boton-${opcion}1`);
     }
     else if (jugador=="2") {
         jugador2=opcion; 
+        document.getElementById(`boton-${opcion}2`);
     }
 }
 
-function resultado (alba, omar) {
-    if (alba===omar) {
-        return alert("Empate"); 
-    };
-    if ((alba=="tijeras") && (omar=="papel")) {
-        return alert("Jugador 1 gana!"); 
-    }; 
-    if ((alba=="papel") && (omar=="piedra")) {
-        return alert("Jugador 1 gana!"); 
-    }
-    if ((alba=="piedra") && (omar=="tijeras")) {
-        return alert("Jugador 1 gana!"); 
-    }
-    return alert("Jugador 2 gana!"); 
+function resultado () {
+    const resultadoDiv = document.getElementById("resultado")
+    if (!jugador1 || !jugador2) {
+        resultadoDiv.textContent = "Ambos jugadores deben seleccionar una opción";
+        return;
+      }
+    if (jugador1 === jugador2) {
+        resultadoDiv.textContent = "Empate";
+      } else if (
+        (jugador1 === "tijeras" && jugador2 === "papel") ||
+        (jugador1 === "papel" && jugador2 === "piedra") ||
+        (jugador1 === "piedra" && jugador2 === "tijeras")
+      ) {
+        resultadoDiv.textContent = "¡Jugador 1 gana!";
+      } else {
+        resultadoDiv.textContent = "¡Jugador 2 gana!";
+      }
 }
 
 /*alert ("Te toca, jugador 1!");
