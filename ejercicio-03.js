@@ -29,7 +29,7 @@ function opcionEscogida(jugador, opcion){
 
 function resultado () {
     const resultadoDiv = document.getElementById("resultado")
-    if (!jugador1 || !jugador2) {
+    if ((jugador1=="") || (jugador2=="")) {
         resultadoDiv.textContent = "Ambos jugadores deben seleccionar una opción";
         return;
       }
