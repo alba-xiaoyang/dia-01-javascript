@@ -4,22 +4,43 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="juego.css">
 </head>
 <body>
     <script src="./ejercicio-03.js"></script>
 
-    <button id="boton-piedra" onClick="opcionEscogida('1', 'piedra', 'jugador1-piedra')"> piedra </button>
-    <button id="boton-papel" onClick="opcionEscogida('1', 'papel', 'jugador1-papel')"> papel </button>
-    <button id="boton-tijeras" onClick="opcionEscogida('1', 'tijeras', 'jugador1-tijeras')"> tijeras </button>
-  
-    <span> VERSUS </span>
-  
-  
-    <button id="boton-piedra" onClick="opcionEscogida('2', 'piedra', 'jugador2-piedra')"> piedra </button>
-    <button id="boton-papel" onClick="opcionEscogida('2', 'papel', 'jugador2-papel')"> papel </button>
-    <button id="boton-tijeras" onClick="opcionEscogida('2', 'tijeras', 'jugador2-tijeras')"> tijeras </button>
+    <div class="container">
+
+        <div id="jugador1" class="jugador-1">
     
-    <button onClick="resultado(jugador1, jugador2)">¿Quien gana?</button>
+          <button id="boton-piedra1" onClick="opcionEscogida('1', 'piedra')">Piedra</button>
+    
+          <button id="boton-papel1" onClick="opcionEscogida('1', 'papel')">Papel</button>
+    
+          <button id="boton-tijeras1" onClick="opcionEscogida('1', 'tijeras')">Tijeras</button>
+    
+        </div>
+    
+    
+    
+        <span class="versus">VERSUS</span>
+    
+    
+    
+        <div id="jugador2" class="jugador-2">
+    
+          <button id="boton-piedra2" onClick="opcionEscogida('2', 'piedra')">Piedra</button>
+    
+          <button id="boton-papel2" onClick="opcionEscogida('2', 'papel')">Papel</button>
+    
+          <button id="boton-tijeras2" onClick="opcionEscogida('2', 'tijeras')">Tijeras</button>
+    
+        </div>
+    
+    
+    
+        <button class="result" onClick="resultado()">¿Quién gana?</button>
+    </div>
 
 </body>
 </html>
